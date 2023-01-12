@@ -1,24 +1,40 @@
 import {React} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import SEARCHSVG from '../assets/icons/search.svg';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import SearchSvg from '../assets/icons/search.svg';
 
-const SearchBar = () => {
+const SearchBar = ({term, onTermChange, onTermSubmit}) => {
     return (
-        <View style={styles.background}>
-          <SEARCHSVG width="40" height="40"/>
-          <Text>Search bar</Text>
+        <View style={styles.backgroundStyle}>
+          <SearchSvg width="35" height="35" style={styles.svgStyle}/>
+          <TextInput 
+                placeholder='Search' 
+                style={styles.textStyle}
+                value={term}
+                autoCapitalize='none'
+                autoCorrect={false}
+                onChangeText={onTermChange}
+                onEndEditing={onTermSubmit}
+           /> 
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    background: {
+    backgroundStyle: {
         flexDirection: 'row',
-        alignItems: 'center',
         backgroundColor: '#DEDEDE',
         height: 50,
         marginHorizontal: 15,
-        borderRadius: 8
+        borderRadius: 8,
+        marginTop: 15
+    },
+    textStyle: {
+        flex: 1,
+        fontSize: 18
+    },
+    svgStyle: {
+        marginHorizontal: 10,
+        alignSelf: 'center'
     }
 })
 
