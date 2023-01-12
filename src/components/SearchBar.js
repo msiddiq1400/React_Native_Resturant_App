@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
         height: 50,
         marginHorizontal: 15,
         borderRadius: 8,
-        marginTop: 15
+        marginTop: 15,
+        marginBottom: 10
     },
     textStyle: {
         flex: 1,
