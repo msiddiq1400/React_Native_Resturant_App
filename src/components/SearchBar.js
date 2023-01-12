@@ -1,11 +1,11 @@
 import {React} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-// import SEARCHSVG from '../assets/icons/search.svg';
+import SEARCHSVG from '../assets/icons/search.svg';
 
 const SearchBar = () => {
     return (
         <View style={styles.background}>
-          {/* <SEARCHSVG/> */}
+          <SEARCHSVG width="40" height="40"/>
           <Text>Search bar</Text>
         </View>
     );
